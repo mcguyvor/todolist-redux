@@ -1,7 +1,18 @@
-.Todo-list{
-    
+.Todolist{
+    width: 70%;
+    margin-top : 70px;
+    margin-left: auto;
+    margin-right:auto;
+    display:flex;
+    flex-direction: column;
+    text-align: center;
 
 }
-.Title{
-    font-weight: bold;
+
+.todoform label{
+    
+    flex: 1 0 500px;
+}
+.todoform Field{
+    flex:1 0 200px;
 }

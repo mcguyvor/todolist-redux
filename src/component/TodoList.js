@@ -3,16 +3,20 @@ import {connect} from 'react-redux';
 import {addTodo} from '../action/index'
 import TodoForm from'./TodoForm'
 import Todo from './Todo'
+import '../style/TodoList.css'
 class TodoList extends Component{
     
     render(){
         console.log('form value : ', this.props.formValue)
         return(
-            <div>
+            <div className='Todolist' >
                 <h1>TodoList</h1>
-                <TodoForm onSubmit={addTodo(this.props.formValue)}/>
-                <Todo/>
-            </div>
+                
+                    <TodoForm onSubmit={addTodo(this.props.formValue)}/>
+                
+                    <Todo/>
+                </div>
+            
         );
     }
 }
