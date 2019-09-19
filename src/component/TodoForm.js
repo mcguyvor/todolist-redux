@@ -6,10 +6,11 @@ import {addTodo} from '../action/index'
      //submit = values =>{
        //  console.log(values)
     // };
+    
     render(){
-        const {handleSubmit} =this.props;
+        const {handleSubmit,onSubmit} =this.props;
         return(
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit(onSubmit)}>
                 <label htmlFor='todo'>Add todo</label>
                 <Field name='todo'component='input'type='text'/>
                 <button type='submit'> add</button>
@@ -21,9 +22,5 @@ TodoForm = reduxForm({
     form : 'todo',
    
 })(TodoForm)
-function mapStatetoProps(state){
 
-console.log(state.form);
-
-}
-export default connect(mapStatetoProps,{addTodo})(TodoForm);
+export default connect(null,{addTodo})(TodoForm);

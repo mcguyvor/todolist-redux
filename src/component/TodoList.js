@@ -23,20 +23,26 @@ class TodoList extends Component{
     }*/
     submit = values =>{
         console.log(values)
-        return addTodo(values);
     }
     render(){
+        console.log('form value : ', this.props.formValue)
         return(
             <div>
                 <h1>TodoList</h1>
-                <TodoForm onSubmit={this.submit}/>
+                <TodoForm onSubmit={addTodo(this.props.formValue)}/>
                 <Todo/>
             </div>
         );
     }
 }
 //export default TodoList;
-function mapStatetoProps(){
-    console.log('test')
+function mapStatetoProps({form}){
+    console.log('form todo',form.todo ? form.todo.values : null);
+   return ({formValue : form.todo ? form.todo.values : null});
+  /*  return({
+        formValue : form.todo.values
+    }) */ 
+    
+   
 }
 export default connect(mapStatetoProps,{addTodo})(TodoList);
