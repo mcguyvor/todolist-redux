@@ -8,9 +8,9 @@ import {addTodo} from '../action/index'
     // };
     
     render(){
-        const {handleSubmit} =this.props;
+        const {handleSubmit,addTodo} =this.props;
         return(
-            <form onSubmit={handleSubmit(this.props.handleSubmit)}>
+            <form onSubmit={handleSubmit(addTodo)}>
                 <label htmlFor='todo'>Add todo</label>
                 <Field name='todo'component='input'type='text'/>
                 <button type='submit'> add</button>

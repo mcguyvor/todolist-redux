@@ -7,7 +7,7 @@ export function addTodoReducer (state=[],action){
         case ADD_TODO:
         console.log('check praram',action,state)
         return (
-            state = [...state,{todo : action.payload, id : action.id}]);
+            state = [...state,{todoText : action.payload, id : action.id}]);
        default: return state;
             
     }

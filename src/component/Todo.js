@@ -2,13 +2,8 @@ import React, { Component } from 'react';
 import {connect} from 'react-redux';
 class Todo extends Component{
     renderTodo(todos){
-        return(
-            todos.map(todo=>
-                <li>{todo}</li>
-                )
-        )
-            }
-    
+        return todos.map(idx=><li ket={idx.id}>{idx.todoText.todo}</li>)
+    }
     render(){
         return(
             <div>
