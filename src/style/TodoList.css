@@ -16,3 +16,7 @@
 .todoform Field{
     flex:1 0 200px;
 }
+.filter{
+    display: flex;
+    text-align: center;
+}

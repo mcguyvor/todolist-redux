@@ -4,6 +4,7 @@ import {addTodo} from '../action/index'
 import TodoForm from'./TodoForm'
 import Todo from './Todo'
 import '../style/TodoList.css'
+import Filter from'./Filter'
 class TodoList extends Component{
     
     render(){
@@ -13,8 +14,8 @@ class TodoList extends Component{
                 <h1>TodoList</h1>
                 
                     <TodoForm onSubmit={addTodo(this.props.formValue)}/>
-                
                     <Todo/>
+                    <Filter/>
                 </div>
             
         );
